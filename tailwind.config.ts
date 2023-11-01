@@ -5,6 +5,7 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/providers/**.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -14,6 +15,9 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    fontFamily: {
+      poppins: ['Poppins', 'sans-serif'],
+    }
   },
   plugins: [],
 }
