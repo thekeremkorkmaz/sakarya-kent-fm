@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { GiHamburgerMenu } from 'react-icons/gi'
 
 import ThemeToggle from '@/components/ThemeToggle'
 import AuthLinks from '@/components/AuthLinks'
@@ -23,16 +22,14 @@ const page = () => {
           <h2>ArlanBlog</h2>
         </div>
         {/* links */}
-        <div className='flex gap-5 lg:flex-1 items-center max-lg:text-sm max-md:hidden'>
+        <div className='flex gap-5 lg:flex-1 items-center max-lg:text-sm '>
           <ThemeToggle />
-          <Link href="/">HomePage</Link>
-          <Link href="/">Contact</Link>
-          <Link href="/">About</Link>
+          <Link className='max-md:hidden' href="/">HomePage</Link>
+          <Link className='max-md:hidden' href="/">Contact</Link>
+          <Link className='max-md:hidden' href="/">About</Link>
           <AuthLinks />
         </div>
-        <div className='hidden max-md:inline cursor-pointer'>
-          <GiHamburgerMenu size={25}/>
-        </div>
+
       </div>
     </div>
   )
