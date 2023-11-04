@@ -4,14 +4,14 @@ import Image from 'next/image'
 
 const page = () => {
   return (
-    <div className='flex mt-11 max-md:flex-col '>
+    <div className='flex mt-11 max-lg:flex-col '>
       <div className='md:flex-5 flex flex-col gap-5 mb-6'>
         <div className='flex items-center gap-5'>
           <Image className='rounded-[50%]' src="/logo.png" width={50} height={50} alt='logo' />
           <h1 className='font-semibold'>Arlan Medya</h1>
         </div>
         <p className='w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur. Eum, commodi voluptate animi provident odit laboriosam ratione maiores mollitia necessitatibus voluptatum.</p>
-        <div className='flex gap-2 lg:flex-1  max-lg:hidden '>
+        <div className='flex gap-2 lg:flex-1'>
           <Image src="/instagram.png" height={24} width={24} alt='helo' />
           <Image src="/facebook.png" height={24} width={24} alt='helo' />
           <Image src="/tiktok.png" height={24} width={24} alt='helo' />
