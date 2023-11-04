@@ -1,17 +1,13 @@
 "use client"
 import React from 'react'
-import { useGenerationStore } from '@/store/idea-generation'
 
 
 const index = () => {
 
-  const { theme, setTheme } = useGenerationStore()
   return (
-    <div>
-      <p>hey: {theme ? "light": "dark"}</p>
-      <button onClick={()=>{
-        setTheme(!theme)
-      }}>Change Truth</button>
+    <div className='md:flex-5 flex justify-between mt-11'>
+      <button className='bg-red-600 px-7 py-4 text-white'>Left</button>
+      <button className='bg-red-600 px-7 py-4 text-white'>Right</button>
     </div>
   )
 }

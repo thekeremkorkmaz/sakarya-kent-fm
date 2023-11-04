@@ -9,10 +9,10 @@ const index = () => {
   
   return (
     <div>
-      <h1 className='text-3xl font-bold'>Popular Categories</h1>
+      <h1 className='text-3xl font-bold max-md:2xl'>Popular Categories</h1>
       <div className='flex flex-wrap justify-start gap-5 px-4 mt-10'>
         {data.data.map((item: CateProps) => (
-          <Link href={`/blog?cat=${item.name}`} key={item.name} className={`flex gap-3 bg-[#${item.color}] items-center justify-center py-5 w-44 max-md:w-32 rounded-lg text-md font-medium`}>
+          <Link href={`/blog?cat=${item.name}`} key={item.name} className={`flex gap-3 bg-${item.color} items-center justify-center py-5 w-44 max-md:w-32 rounded-lg text-md font-medium`}>
             <Image className='rounded-[100%] w-[30px] h-[30px]' src={`/${item.img}`} height={24} width={24} alt='' />
             {item.name}
           </Link>
