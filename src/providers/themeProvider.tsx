@@ -6,7 +6,7 @@ const themeProvider = ({ children }: {children: React.ReactNode}) => {
     const { theme } = useGenerationStore()
 
     return (
-        <div className={`${theme ? "bg-white text-black" : "bg-black text-[#ddd]"}`}>{children}</div>
+        <div className={`${theme ? "bg-white text-black" : "bg-black text-white"}`}>{children}</div>
     )
 }
 
