@@ -36,7 +36,7 @@ const index = () => {
         {/* Categories */}
         <div className='flex mt-4 flex-wrap gap-5'>
           {data.data.map((item) => (
-            <span className={`bg-${item.color}  py-2 px-3 rounded-lg`}>{item.name}</span>
+            <span className={`bg-${item.color} text-sm py-2 px-3 rounded-lg`}>{item.name}</span>
           ))}
         </div>
         {/* Editors Choose line */}

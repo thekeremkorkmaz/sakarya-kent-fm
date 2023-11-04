@@ -8,7 +8,7 @@ export const data = {
             "date": "2021-01-01"
         },
         {
-            "color": "red-600",
+            "color": "red-300",
             "name": "fashion",
             "img": "fashion.png",
             "creator": "eto",
@@ -22,7 +22,7 @@ export const data = {
             "date": "2021-01-01"
         },
         {
-            "color": "orange-300",
+            "color": "yellow-300",
             "name": "coding",
             "img": "coding.png",
             "creator": "oso",

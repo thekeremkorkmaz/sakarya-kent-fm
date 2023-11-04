@@ -21,7 +21,7 @@ const index = () => {
             }
             <div>
                 <div className='flex gap-4 mt-6'>
-                    <Image className='w-10 h-10 rounded-[50%] bg-orange-300 bg-green-300' src="/p1.jpeg" width={50} height={50} alt=''/>
+                    <Image className='w-10 h-10 rounded-[50%] bg-yellow-300 bg-green-300' src="/p1.jpeg" width={50} height={50} alt=''/>
                     <div className='flex-1'>
                         <h6 className='text-lg'>William Randolp</h6>
                         <p className='text-xs'>25 April 2023</p>
