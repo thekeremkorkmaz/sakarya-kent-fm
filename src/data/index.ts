@@ -15,7 +15,7 @@ export const data = {
             "date": "2021-02-01"
         },
         {
-            "color": "blue-600",
+            "color": "blue-300",
             "name": "culture",
             "img": "culture.png",
             "creator": "ender",
@@ -24,7 +24,7 @@ export const data = {
         {
             "color": "orange-300",
             "name": "coding",
-            "img": "culture.png",
+            "img": "coding.png",
             "creator": "oso",
             "date": "2023-01-01"
         },

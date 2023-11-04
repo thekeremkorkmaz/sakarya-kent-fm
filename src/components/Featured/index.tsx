@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const index = () => {
   return (
@@ -12,7 +13,7 @@ const index = () => {
         <div className='md:flex-1 flex gap-8 flex-col text-left'>
           <h2 className='text-4xl font-semibold max-md:text-2xl max-lg:text-2xl'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
           <p className='text-md max-lg:text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, doloremque. Fugiat accusantium laudantium quia veniam quibusdam modi provident! Omnis corrupti cumque praesentium veniam repellat consequatur blanditiis ex pariatur. Libero, harum?</p>
-          <button className='w-max px-4 py-3 max-md:px-3 max-md:py-2 border-2 bg-[#e5e5e5] text-black rounded-lg text-sm'>Read More</button>
+          <Link href={"/product/hello"} className='w-max px-4 py-3 max-md:px-3 max-md:py-2 border-2 bg-[#e5e5e5] text-black rounded-lg text-sm'>Read More</Link>
         </div>
       </div>
     </div>
