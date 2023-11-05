@@ -22,10 +22,10 @@ const Index = () => {
             <Link href="/login">Login</Link>
           </>
         ) : (
-          <>
+          <div className='flex gap-3'>
             <Link href="/write">Write</Link>
             <span className='cursor-pointer'>Logout</span>
-          </>
+          </div>
         )}
 
       </div>
