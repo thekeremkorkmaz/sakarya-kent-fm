@@ -32,7 +32,7 @@ const Page = () => {
           </div>
         )}
       </div>
-      <CKEditor
+      {/* <CKEditor
         editor={ClassicEditor}
         data="<p>Yazmaya başla..</p>"
         onReady={(editor) => {
@@ -42,7 +42,7 @@ const Page = () => {
           const data = editor.getData();
           console.log( data );
         }}
-      />
+      /> */}
       <button className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'>Publish</button>
     </div>
   );
