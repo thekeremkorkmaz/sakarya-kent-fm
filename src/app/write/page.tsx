@@ -1,15 +1,19 @@
 "use client"
 import { useState } from 'react';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { BsFillCameraVideoFill, BsImageFill, BsPlusCircleFill } from 'react-icons/bs';
 import { BiLinkExternal } from 'react-icons/bi';
+
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 
 const Page = () => {
   const [open, setOpen] = useState(true);
   const [value, setValue] = useState('');
 
+  const formattedValue = `<p>${value}</p>`;
+  
+  console.log(formattedValue);
 
   return (
     <div className='flex flex-col gap-14 mt-16 relative'>
@@ -32,17 +36,14 @@ const Page = () => {
           </div>
         )}
       </div>
-      {/* <CKEditor
-        editor={ClassicEditor}
-        data="<p>Yazmaya başla..</p>"
-        onReady={(editor) => {
-          console.log("CKEditor5 React Component is ready to use!", editor);
-        }}
-        onChange={(event, editor) => {
-          const data = editor.getData();
-          console.log( data );
-        }}
-      /> */}
+      <div>
+        <textarea 
+          onChange={(e) => setValue(e.target.value)}
+          className='max-w-[50%] h-36 w-[80%] text-2xl border-black bg-transparent max-sm:text-base'
+          placeholder='Text'
+        ></textarea>
+      </div>
+
       <button className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'>Publish</button>
     </div>
   );
