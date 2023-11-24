@@ -5,10 +5,10 @@ import Card from '@/components/Card';
 
 interface PaginationProps {
   page: number;
-  cat: string;
+  cat?: string;
 }
 
-const getData = async (page: number, cat: string) => {
+const getData = async (page: number, cat?: string) => {
   const res = await fetch(`https://arlan-blog.vercel.app/api/posts?page=${page}&cat=${cat || ""}`, {
     cache: "no-store",
   })
