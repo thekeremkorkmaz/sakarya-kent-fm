@@ -2,18 +2,25 @@
 import { useState } from 'react';
 import { BsFillCameraVideoFill, BsImageFill, BsPlusCircleFill } from 'react-icons/bs';
 import { BiLinkExternal } from 'react-icons/bi';
-
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 
 const Page = () => {
   const [open, setOpen] = useState(true);
   const [value, setValue] = useState('');
 
-  const formattedValue = `<p>${value}</p>`;
-  
-  console.log(formattedValue);
+  const {data, status} = useSession()
+
+  const router = useRouter()
+
+  if(status === 'loading'){
+    return <div>Loading...</div>
+  }
+
+  if(status === 'unauthenticated'){
+    router.push('/login')
+  }
 
   return (
     <div className='flex flex-col gap-14 mt-16 relative'>
@@ -36,14 +43,9 @@ const Page = () => {
           </div>
         )}
       </div>
-      <div>
-        <textarea 
-          onChange={(e) => setValue(e.target.value)}
-          className='max-w-[50%] h-36 w-[80%] text-2xl border-black bg-transparent max-sm:text-base'
-          placeholder='Text'
-        ></textarea>
-      </div>
-
+      <textarea className='h-64 py-2 px-2 w-[80%] bg-transparent' onChange={(e)=>{
+        setValue(e.target.value)
+      }} placeholder='yazmaya burdan başla'></textarea>
       <button className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'>Publish</button>
     </div>
   );

@@ -3,16 +3,15 @@ import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { AuthLinksProps } from '@/types/index';
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { signOut, useSession } from 'next-auth/react';
 
 import HamburgerMenu from '@/components/HamburgerMenu';
 
 const Index = () => {
-  const status: AuthLinksProps["status"] = 'authenticated';
-
+  
+  const { status } = useSession();
   const [showMenu, setShowMenu] = useState(false);
-  console.log(showMenu);
 
   return (
     <div>
@@ -24,7 +23,9 @@ const Index = () => {
         ) : (
           <div className='flex gap-3'>
             <Link href="/write">Write</Link>
-            <span className='cursor-pointer'>Logout</span>
+            <span onClick={()=>{
+              signOut()
+            }} className='cursor-pointer'>Logout</span>
           </div>
         )}
 

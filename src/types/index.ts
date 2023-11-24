@@ -3,7 +3,7 @@ export type AuthLinksProps = {
 };
 
 export type CateProps = {
-    color: string;
-    name: string;
-    img: string;
+    title: string;
+    img?: string;
+    color?: string;
 };
