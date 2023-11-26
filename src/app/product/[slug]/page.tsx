@@ -60,7 +60,7 @@ const page = async ({ params }: { params: Params } ) => {
                 </div>
             </div>
             <div className='flex gap-11 max-md:flex-col'>
-                <SingleBlog data={data.desc}/>
+                <SingleBlog data={data.desc} slug={slug}/>
                 <Menu />
             </div>
         </div>

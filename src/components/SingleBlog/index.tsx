@@ -3,9 +3,10 @@ import Comments from '@/components/Comments';
 
 interface Props {
   data: string;
+  slug: string;
 }
 
-const index = ({ data }: Props) => {
+const index = ({ data, slug }: Props) => {
   console.log("single", data);
 
   if (!data) {
@@ -23,7 +24,7 @@ const index = ({ data }: Props) => {
   return (
     <div className='flex-5'>
       <div className='flex flex-col gap-3 max-md:text-sm' dangerouslySetInnerHTML={{ __html: htmlContent }} />
-      <Comments />
+      <Comments postSlug={slug}/>
     </div>
   );
 };

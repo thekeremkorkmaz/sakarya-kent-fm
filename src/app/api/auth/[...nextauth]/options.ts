@@ -1,9 +1,8 @@
 import GitHubProvider from "next-auth/providers/github";
 import GooglePrivder from "next-auth/providers/google";
 import { PrismaAdapter } from "@auth/prisma-adapter"
-import { PrismaClient } from "@prisma/client"
 import  prisma  from "@/utils/connect";
-
+import { getServerSession } from "next-auth";
 
 const options = {
   adapter: PrismaAdapter(prisma),
@@ -21,5 +20,8 @@ const options = {
     signIn: '/login',
   }
 };
+
+// auth bilgilerini almak için kullanılır.
+export const getAuthSession = () => getServerSession(options);
 
 export default options;
