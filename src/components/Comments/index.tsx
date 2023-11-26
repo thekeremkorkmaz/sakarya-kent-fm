@@ -94,6 +94,7 @@ const index = ({postSlug} : Params) => {
                                 <p className='text-xs opacity-75'>{formatCreatedAt(comment.createdAt)}</p>
                                 <p className='text-lg opacity-90'>{comment.desc}</p>
                             </div>
+                            <div className='bg-blue-300 bg-red-300 bg-yellow-300 bg-green-300 bg-orange-300 bg-pink-300'></div>
                         </div>
                     ))
                 )   
