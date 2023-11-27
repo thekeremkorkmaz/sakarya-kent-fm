@@ -60,7 +60,7 @@ const page = async ({ params }: { params: Params }) => {
         </div>
       </div>
       <div className='flex gap-11 max-md:flex-col'>
-        {data.views && <p className='text-xs opacity-75'>Views: {data.views}</p>}
+        {<p className='text-xs opacity-75'>Views: {data.views}</p>}
         <SingleBlog data={data.desc} slug={slug} />
         <Menu />
       </div>
