@@ -1,15 +1,22 @@
 "use client"
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsFillCameraVideoFill, BsImageFill, BsPlusCircleFill } from 'react-icons/bs';
 import { BiLinkExternal } from 'react-icons/bi';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { app } from "@/utils/firebase";
+import "react-quill/dist/quill.bubble.css";
 
 const storage = getStorage(app);
 
 const Page = () => {
+  const { status } = useSession()
+
+  const ReactQuill = React.lazy(() => import('react-quill'));
+
+
+  const router = useRouter()
 
   const [file, setFile] = useState<File | null>(null);
   const [media, setMedia] = useState("");
@@ -18,9 +25,7 @@ const Page = () => {
   const [title, setTitle] = useState('');
   const [catSlug, setCatSlug] = useState("");
 
-  const { data, status } = useSession()
 
-  const router = useRouter()
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -138,9 +143,13 @@ const Page = () => {
           </div>
         )}
       </div>
-      <textarea className='h-64 py-2 px-2 w-[80%] bg-transparent' onChange={(e) => {
-        setValue(e.target.value)
-      }} placeholder='yazmaya burdan başla'></textarea>
+      <ReactQuill
+         
+          theme="bubble"
+          value={value}
+          onChange={setValue}
+          placeholder="Tell your story..."
+        />
       <button
         className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
         onClick={handleSubmit}
