@@ -7,13 +7,13 @@ import { useRouter } from 'next/navigation';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { app } from "@/utils/firebase";
 import "react-quill/dist/quill.bubble.css";
-
-const storage = getStorage(app);
+import dynamic from "next/dynamic";
 
 const Page = () => {
   const { status } = useSession()
 
-  const ReactQuill = React.lazy(() => import('react-quill'));
+  const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+  
 
 
   const router = useRouter()
@@ -143,13 +143,14 @@ const Page = () => {
           </div>
         )}
       </div>
-      <ReactQuill
-         
+      <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
+        <ReactQuill
           theme="bubble"
           value={value}
           onChange={setValue}
           placeholder="Tell your story..."
         />
+      </div>
       <button
         className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
         onClick={handleSubmit}
