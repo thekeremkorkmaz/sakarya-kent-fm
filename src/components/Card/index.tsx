@@ -20,7 +20,7 @@ const index = ({item, key}: any) => {
   const textContent = typeof item.desc === 'string' ? item.desc.replace(/<[^>]*>/g, '') : '';
 
   return (
-    <div key={key} className='flex items-center gap-4 max-md:gap-3 max-md:flex-col'>
+    <div key={key} className='flex items-center gap-4 max-md:gap-3 max-md:flex-col max-md:items-start'>
         <div className='md:flex-1 md:w-[500px] max-md:text-left max-md:w-full'>
             <Image className='w-[400px] h-[300px] object-cover max-md:w-[150px] max-md:h-[150px] max-md:rounded-[50%]' src="/p1.jpeg" height={300} width={300} alt='cate'/>
         </div>
