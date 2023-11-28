@@ -38,7 +38,7 @@ const Index: React.FC<PaginationProps> = async ({ page, cat }) => {
       <div className='flex flex-col gap-11 mt-11'>
         {
           posts?.map((item: any) => (
-            <Card key={item.id} item={item} />
+            <Card item={item} />
           ))
         }
       </div>

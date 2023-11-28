@@ -15,8 +15,8 @@ const index = () => {
         </div>
         {/* tabs */}
         <div className='flex flex-col gap-7 mt-5'>
-          {data.data.map((item) => (
-            <div key={item.name} className='flex flex-col gap-2'>
+          {data.data.map((item, index) => (
+            <div key={index} className='flex flex-col gap-2'>
               <span className={`bg-${item.color}  rounded-xl text-xs w-max px-2 py-1 text-white`}>{item.name}</span>
               <p className='text-sm opacity-80'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur?</p>
               <div className='flex gap-1 text-sm'>

@@ -6,4 +6,5 @@ export type CateProps = {
     title: string;
     img?: string;
     color?: string;
+    id: string;
 };
