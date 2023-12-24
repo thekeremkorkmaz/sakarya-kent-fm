@@ -8,7 +8,7 @@ const page = () => {
       <div className='md:flex-5 flex flex-col gap-5 mb-6'>
         <div className='flex items-center gap-5'>
           <Image className='rounded-[50%]' src="/logo.png" width={50} height={50} alt='logo' />
-          <h1 className='font-semibold'>Arlan Medya</h1>
+          <h1 className='font-semibold'>Sakarya Kent Fm</h1>
         </div>
         <p className='w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur. Eum, commodi voluptate animi provident odit laboriosam ratione maiores mollitia necessitatibus voluptatum.</p>
         <div className='flex gap-2 lg:flex-1'>

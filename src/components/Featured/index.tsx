@@ -5,7 +5,7 @@ import Link from 'next/link'
 const index = () => {
   return (
     <div >
-      <h1 className='md:text-5xl lg:text-7xl text-4xl leading-normal'>Hey,<b> Arlan Medya</b> here, Discover my stories and creative ideas.</h1>
+      <h1 className='md:text-5xl lg:text-7xl text-4xl leading-normal'>Hey,<b> Sakarya Kent Fm</b> here, Discover my stories and creative ideas.</h1>
       <div className='mt-16 md:gap-11 flex justify-center items-center'>
         <div className='md:flex-1'>
           <Image className='w-[500px] h-[500px] max-lg:w-[400px] max-lg:h-[400px]  max-md:hidden' src="/p1.jpeg" height={500} width={400} alt='featured'/>

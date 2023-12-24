@@ -19,7 +19,7 @@ const page = () => {
         </div>
         {/* logo */}
         <div className='lg:flex-1 text-center text-3xl font-bold max-lg:text-2xl'> 
-          <h2><Link href={"/"}>ArlanBlog</Link></h2>
+          <h2><Link href={"/"}>Sakarya Kent Fm</Link></h2>
         </div>
         {/* links */}
         <div className='flex gap-5 lg:flex-1 items-center max-lg:text-sm '>
