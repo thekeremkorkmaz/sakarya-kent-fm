@@ -19,17 +19,17 @@ const Index = () => {
         {status === 'unauthenticated' ? (
           <>
             <Link onClick={() => {
-              setShowMenu(!showMenu);
+              setShowMenu(false);
             }} href="/login">Login</Link>
           </>
         ) : (
           <div className='flex gap-3'>
             <Link onClick={() => {
-              setShowMenu(!showMenu);
+              setShowMenu(false);
             }} href="/write">Write</Link>
             <span onClick={()=>{
               signOut()
-              setShowMenu(!showMenu)
+              setShowMenu(false)
             }} className='cursor-pointer'>Logout</span>
           </div>
         )}
