@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import 'react-quill/dist/quill.snow.css';
+import "react-quill/dist/quill.bubble.css";
 import dynamic from "next/dynamic";
 
 const Page = () => {
@@ -145,9 +145,10 @@ const Page = () => {
       </div>
       <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
         <ReactQuill
-          theme="snow"
+          theme="bubble"
           value={value}
           onChange={setValue}
+          placeholder='Yazmaya başlayın...'
         />
       </div>
       <button
