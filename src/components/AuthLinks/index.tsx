@@ -3,10 +3,13 @@ import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { signOut, useSession } from 'next-auth/react';
 import HamburgerMenu from '@/components/HamburgerMenu';
+import { useGenerationStore } from '@/store/idea-generation'
+
 
 const Index = () => {
   const { status } = useSession();
-  const [showMenu, setShowMenu] = useState(false);
+
+  const { showMenu, setShowMenu } = useGenerationStore()
 
   // Linklere tıklanınca menüyü kapat
   const closeMenu = () => {
