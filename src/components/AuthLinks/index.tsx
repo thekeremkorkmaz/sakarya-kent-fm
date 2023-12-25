@@ -18,13 +18,18 @@ const Index = () => {
       <div className='max-md:hidden'>
         {status === 'unauthenticated' ? (
           <>
-            <Link href="/login">Login</Link>
+            <Link onClick={() => {
+              setShowMenu(!showMenu);
+            }} href="/login">Login</Link>
           </>
         ) : (
           <div className='flex gap-3'>
-            <Link href="/write">Write</Link>
+            <Link onClick={() => {
+              setShowMenu(!showMenu);
+            }} href="/write">Write</Link>
             <span onClick={()=>{
               signOut()
+              setShowMenu(!showMenu)
             }} className='cursor-pointer'>Logout</span>
           </div>
         )}
