@@ -7,8 +7,8 @@ import AuthProvider from '@/providers/authProvider'
 
 
 export const metadata: Metadata = {
-  title: 'Arlan-Blog',
-  description: 'Arlan Medya blog app',
+  title: 'SakaryaKent-Fm',
+  description: 'Sakarya Kent Fm 87.5',
 }
 
 export default function RootLayout({
