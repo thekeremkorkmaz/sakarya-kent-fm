@@ -143,7 +143,7 @@ const Page = () => {
           </div>
         )}
       </div>
-      <div className='h-56 max-sm:w-[100%] w-[80%] max-sm:text-base '>
+      <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
         <ReactQuill
           theme="snow"
           value={value}
