@@ -3,10 +3,11 @@ import React from 'react'
 import Link from 'next/link'
 import { useGenerationStore } from '@/store/idea-generation'
 import { AuthLinksProps } from '@/types/index';
+import { useSession } from 'next-auth/react';
 
 const index = () => {
 
-    const status: AuthLinksProps["status"] = 'authenticated';
+    const { status } = useSession();
 
     const { showMenu, setShowMenu } = useGenerationStore()
 
