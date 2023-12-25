@@ -83,7 +83,7 @@ const Page = () => {
     if (!title || !value || !media || !catSlug) {
       console.log('error');
     };
-    const res = await fetch('http://localhost:3000/api/posts', {
+    const res = await fetch('https://sakarya-kent-fm.vercel.app/api/posts', {
       method: 'POST',
       body: JSON.stringify({
         title,
