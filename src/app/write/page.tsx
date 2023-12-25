@@ -83,7 +83,7 @@ const Page = () => {
     if (!title || !value || !media || !catSlug) {
       console.log('error');
     };
-    const res = await fetch('https://arlan-blog.vercel.app/api/posts', {
+    const res = await fetch('http://localhost:3000/api/posts', {
       method: 'POST',
       body: JSON.stringify({
         title,
