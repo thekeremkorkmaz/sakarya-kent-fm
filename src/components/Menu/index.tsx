@@ -28,17 +28,6 @@ const index = () => {
           <div>
           </div>
         </div>
-        {/* Categories line */}
-        <div className='mt-11'>
-          <h3 className='opacity-80'>{"Discover by topic"}</h3>
-          <h2 className='font-bold text-2xl'>Categories</h2>
-        </div>
-        {/* Categories */}
-        <div className='flex mt-4 flex-wrap gap-5'>
-          {data.data.map((item) => (
-            <span className={`bg-${item.color} text-sm py-2 px-3 rounded-lg`}>{item.name}</span>
-          ))}
-        </div>
         {/* Editors Choose line */}
         <div className='mt-12'>
           <h3 className='opacity-80'>{"Chossen by editor"}</h3>
