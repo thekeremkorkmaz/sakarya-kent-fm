@@ -99,7 +99,7 @@ const Page = () => {
   return (
     <div className='flex flex-col gap-14 mt-16 relative'>
       <input
-        className='max-sm:w-[50%] w-[80%] text-2xl py-2 px-2 border-transparent bg-transparent max-sm:text-base'
+        className='max-sm:w-[100%] w-[80%] text-2xl py-2 px-2 border-transparent bg-transparent max-sm:text-base'
         type="text"
         placeholder='title'
         onChange={(e) => {
