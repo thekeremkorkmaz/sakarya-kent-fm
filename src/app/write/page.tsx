@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BsFillCameraVideoFill, BsImageFill, BsPlusCircleFill } from 'react-icons/bs';
 import { BiLinkExternal } from 'react-icons/bi';
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { app } from "@/utils/firebase";
 import "react-quill/dist/quill.bubble.css";
