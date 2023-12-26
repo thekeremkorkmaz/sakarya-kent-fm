@@ -85,6 +85,7 @@ const index = ({postSlug} : Params) => {
                     <p className='text-xl'>Loading...</p>
                 ) : (
                     data?.map((comment: any) => (
+
                         <div className='flex gap-4' key={comment.id}>
                             <div className='w-10 h-10 rounded-full overflow-hidden'>
                                 <Image src={comment.user.image} alt={comment.user.name} width={40} height={40} />
@@ -92,7 +93,8 @@ const index = ({postSlug} : Params) => {
                             <div className='flex-1'>
                                 <p className='text-xl font-semibold'>{comment.user.name}</p>
                                 <p className='text-xs opacity-75'>{formatCreatedAt(comment.createdAt)}</p>
-                                <p className='text-lg opacity-90 max-md:text-sm w-[300px]'>{comment.desc}</p>
+                                <div className='flex flex-col gap-3 max-md:text-sm w-[300px]' dangerouslySetInnerHTML={{ __html: comment.desc }} />
+
                             </div>
                             <div className='bg-blue-300 bg-red-300 bg-yellow-300 bg-green-300 bg-orange-300 bg-pink-300'></div>
                         </div>
