@@ -22,7 +22,7 @@ const Page = () => {
   const [catSlug, setCatSlug] = useState("");
   const [value, setValue] = useState("");
 
-
+  console.log(value);
 
   useEffect(() => {
     const storage = getStorage(app);
