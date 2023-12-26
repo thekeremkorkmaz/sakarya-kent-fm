@@ -16,16 +16,15 @@ const index = ({ data, slug, keyVal }: Props) => {
           <p className='text-2xl font-semibold max-md:text-lg'>Opppsss birşeyler yanlış gitti... </p>
         </div>
       </div>
-    )
+    ) 
   }
 
+  const htmlContent = typeof data === 'string' ? data : '';
 
   return (
     <div className='flex-5'>
-      <div className='w-48'>
-        <p className='custom-paragraph-style'>{data}</p>
-      </div>
-      <Comments postSlug={slug} />
+      <div key={keyVal} className='flex flex-col gap-3 max-md:text-sm w-[300px]' dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      <Comments postSlug={slug}/>
     </div>
   );
 };
