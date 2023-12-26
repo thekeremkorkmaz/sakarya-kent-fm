@@ -101,7 +101,7 @@ const Page = () => {
 
     // Belirli bir uzunluğa ulaşıldığında, textarea'nın otomatik olarak alt satıra geçmesi için
     const textarea = e.target;
-    const rows = Math.ceil((textarea.scrollHeight - textarea.offsetTop) / 20); // 20: Satır başına düşen yaklaşık piksel sayısı
+    const rows = Math.ceil((textarea.scrollHeight - textarea.offsetTop) / 40); // 20: Satır başına düşen yaklaşık piksel sayısı
     textarea.rows = rows;
   };
 
