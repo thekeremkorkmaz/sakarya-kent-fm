@@ -27,7 +27,7 @@ const index = ({ item }: any) => {
       <div className='md:flex-1 max-md:gap-1 flex flex-col md:h-[300px] justify-around'>
         <span className='opacity-80 max-md:text-xs'>{formattedDate}<b className='text-red-600 font-medium ml-2'>- {item.slug}</b></span>
         <h2 className='text-2xl max-md:text-lg font-semibold'>{item.title}</h2>
-        <p className='opacity-80 max-xl:text-sm max-md:text-xs w-52'>{`${textContent.substring(0, 50)}${textContent.length > 50 ? '...' : ''}`}</p>
+        <p className='opacity-80 max-xl:text-sm max-md:text-xs w-52'>{`${textContent.substring(0, 35)}${textContent.length > 35 ? '...' : ''}`}</p>
         <Link className='w-max font-semibold max-md:text-xs' href={`/product/${item.slug}`}>Read More <div className='h-[1px] w-full bg-red-600'></div></Link>
       </div>
     </div>
