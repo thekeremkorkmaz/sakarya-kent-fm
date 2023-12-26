@@ -9,7 +9,6 @@ import { app } from "@/utils/firebase";
 import "react-quill/dist/quill.bubble.css";
 import { useGenerationStore } from '@/store/idea-generation'
 import dynamic from "next/dynamic";
-import Quill from '@/components/Quill';
 
 const Page = () => {
   const { status } = useSession()
@@ -17,7 +16,6 @@ const Page = () => {
   const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 
-  const { value } = useGenerationStore()
 
   const router = useRouter()
 
@@ -26,6 +24,7 @@ const Page = () => {
   const [open, setOpen] = useState(true);
   const [title, setTitle] = useState('');
   const [catSlug, setCatSlug] = useState("");
+  const [value, setValue] = useState("");
 
 
 
@@ -146,7 +145,12 @@ const Page = () => {
         )}
       </div>
       <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
-        <Quill />
+        <input
+          type="text"
+          onChange={(e) => setValue(e.target.value)}
+          value={value}
+          className='w-full h-10 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2'
+        />
       </div>
       <button
         className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
