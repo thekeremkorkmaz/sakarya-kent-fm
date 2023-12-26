@@ -9,12 +9,13 @@ import { useGenerationStore } from '@/store/idea-generation'
 const index = () => {
     const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
-    const { setValue } = useGenerationStore()
+    const { value, setValue } = useGenerationStore()
 
     return (
         <div>
             <ReactQuill
                 theme="bubble"
+                value={value}
                 onChange={setValue}
                 placeholder='Yazmaya başlayın...'
             /></div>
