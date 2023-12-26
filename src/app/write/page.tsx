@@ -7,30 +7,29 @@ import { useRouter } from 'next/navigation';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { app } from "@/utils/firebase";
 import "react-quill/dist/quill.bubble.css";
+import { useGenerationStore } from '@/store/idea-generation'
 import dynamic from "next/dynamic";
-import 'react-quill/dist/quill.snow.css';
 
 const Page = () => {
-  const { status } = useSession();
+  const { status } = useSession()
 
   const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
-  const router = useRouter();
+
+  const { value, setValue } = useGenerationStore()
+
+  const router = useRouter()
 
   const [file, setFile] = useState<File | null>(null);
   const [media, setMedia] = useState("");
-  const [open, setOpen] = useState(true); 
-  const [value, setValue] = useState('');
+  const [open, setOpen] = useState(true);
   const [title, setTitle] = useState('');
   const [catSlug, setCatSlug] = useState("");
-  const [quillFocused, setQuillFocused] = useState(false);
-  const [quillContent, setQuillContent] = useState('');
 
 
 
   useEffect(() => {
     const storage = getStorage(app);
-
     const upload = () => {
       if (!file) return;
       const name = new Date().getTime() + file.name;
@@ -41,7 +40,8 @@ const Page = () => {
       uploadTask.on(
         "state_changed",
         (snapshot) => {
-          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           console.log("Upload is " + progress + "% done");
           switch (snapshot.state) {
             case "paused":
@@ -64,9 +64,13 @@ const Page = () => {
     file && upload();
   }, [file]);
 
-  const handleQuillChange = (content: string) => {
-    setQuillContent(content);
-  };
+  if (status === 'loading') {
+    return <div>Loading...</div>
+  }
+
+  if (status === 'unauthenticated') {
+    router.push('/login')
+  }
 
   const slugify = (str: string) =>
     str
@@ -79,8 +83,7 @@ const Page = () => {
   const handleSubmit = async () => {
     if (!title || !value || !media || !catSlug) {
       console.log('error');
-    }
-
+    };
     const res = await fetch('https://sakarya-kent-fm.vercel.app/api/posts', {
       method: 'POST',
       body: JSON.stringify({
@@ -91,9 +94,8 @@ const Page = () => {
         catSlug: catSlug,
       }),
     });
-
     console.log(res);
-  };
+  }
 
   return (
     <div className='flex flex-col gap-14 mt-16 relative'>
@@ -142,21 +144,13 @@ const Page = () => {
           </div>
         )}
       </div>
-      <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base border'>
+      <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
         <ReactQuill
           theme="bubble"
-          id='desc'
+          value={value}
+          onChange={setValue}
           placeholder='Yazmaya başlayın...'
-          onFocus={() => setQuillFocused(true)}
-          onBlur={() => setQuillFocused(false)}
         />
-        {quillFocused && (
-          <input
-            type="text"
-            value={quillContent}
-            onChange={(e) => handleQuillChange(e.target.value)}
-          />
-        )}
       </div>
       <button
         className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
