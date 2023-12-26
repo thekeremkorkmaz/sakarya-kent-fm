@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import ThemeProvider from '@/providers/themeProvider'
 import AuthProvider from '@/providers/authProvider'
+import { ToastContainer } from 'react-toastify'
 
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
               </main>
               <Footer />
             </div>
+            <ToastContainer position="bottom-right" theme="dark" autoClose={3000}/>
           </ThemeProvider>
         </AuthProvider>
       </body>

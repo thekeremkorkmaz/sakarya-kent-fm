@@ -1,19 +1,15 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { BsFillCameraVideoFill, BsImageFill, BsPlusCircleFill } from 'react-icons/bs';
-import { BiLinkExternal } from 'react-icons/bi';
+import { BsImageFill, BsPlusCircleFill } from 'react-icons/bs';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import "react-quill/dist/quill.bubble.css";
-import { useGenerationStore } from '@/store/idea-generation'
-import dynamic from "next/dynamic";
+import { toast } from 'react-toastify';
 
 const Page = () => {
   const { status } = useSession()
 
-  const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 
 
@@ -32,6 +28,7 @@ const Page = () => {
     const storage = getStorage(app);
     const upload = () => {
       if (!file) return;
+      toast.warning('Lütfen bekleyin...');
       const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
 
@@ -56,6 +53,7 @@ const Page = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setMedia(downloadURL);
+            toast.success('Image uploaded successfully')
           });
         }
       );
@@ -94,7 +92,8 @@ const Page = () => {
         catSlug: catSlug,
       }),
     });
-    console.log(res);
+    toast.success('Blogunuz başarıyla yayınlandı');
+    router.push('/');
   }
 
   return (
@@ -135,12 +134,6 @@ const Page = () => {
             <label className='cursor-pointer' htmlFor="image">
               <BsImageFill size={25} color="green" />
             </label>
-            <button>
-              <BsFillCameraVideoFill size={25} color="green" />
-            </button>
-            <button>
-              <BiLinkExternal size={25} color="green" />
-            </button>
           </div>
         )}
       </div>
