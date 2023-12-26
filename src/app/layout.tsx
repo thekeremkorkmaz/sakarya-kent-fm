@@ -30,7 +30,7 @@ export default function RootLayout({
               </main>
               <Footer />
             </div>
-            <ToastContainer position="bottom-right" theme="dark" autoClose={3000}/>
+            <ToastContainer position="top-right" theme="dark" autoClose={3000}/>
           </ThemeProvider>
         </AuthProvider>
       </body>

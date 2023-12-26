@@ -142,7 +142,7 @@ const Page = () => {
           onChange={(e) => setValue(e.target.value)}
           placeholder='Blogunuzu buraya yazın...'
           value={value}
-          className='w-full h-52 border-2 border-gray-300  rounded-lg outline-none focus:border-blue-500 px-2'
+          className='w-full h-52 border-2 border-gray-300  rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base'
         />
       </div>
       <button
