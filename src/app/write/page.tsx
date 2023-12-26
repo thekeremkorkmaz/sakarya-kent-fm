@@ -146,7 +146,7 @@ const Page = () => {
         <ReactQuill
           theme="bubble"
           id='desc'
-          
+          value={quillContent}
           
           placeholder='Yazmaya başlayın...'
           onFocus={() => setQuillFocused(true)}
@@ -155,7 +155,8 @@ const Page = () => {
         {quillFocused && (
           <input
             type="text"
-            className='hidden'
+            value={quillContent}
+            onChange={(e) => handleQuillChange(e.target.value)}
             onFocus={() => setQuillFocused(true)} // Odaklandığında ReactQuill'e odaklanması sağlanır
           />
         )}
