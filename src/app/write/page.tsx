@@ -149,6 +149,7 @@ const Page = () => {
         className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
         onClick={handleSubmit}
       >Publish</button>
+      <p>Herşeyi yaptığınızdan emin olduktan sonra publis butonuna basıp bekleyin anasayfaya yönlendirileceksiniz. "+" işaretine bastıktan sonra görsel simgesine tıklayak resim yükleyebilirsiniz.</p>
     </div>
   );
 }
