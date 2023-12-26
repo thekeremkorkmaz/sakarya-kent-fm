@@ -146,8 +146,6 @@ const Page = () => {
         <ReactQuill
           theme="bubble"
           id='desc'
-          value={quillContent}
-          
           placeholder='Yazmaya başlayın...'
           onFocus={() => setQuillFocused(true)}
           onBlur={() => setQuillFocused(false)}
