@@ -148,7 +148,7 @@ const Page = () => {
         <textarea
           onChange={(e) => setValue(e.target.value)}
           value={value}
-          className='w-full h-10 border-2 border-gray-300 h-72 rounded-lg outline-none focus:border-blue-500 px-2'
+          className='w-full h-400 border-2 border-gray-300  rounded-lg outline-none focus:border-blue-500 px-2'
         />
       </div>
       <button
