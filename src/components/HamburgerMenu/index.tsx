@@ -3,7 +3,8 @@ import React from 'react'
 import Link from 'next/link'
 import { useGenerationStore } from '@/store/idea-generation'
 import { AuthLinksProps } from '@/types/index';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
+
 
 const index = () => {
 
@@ -29,6 +30,7 @@ const index = () => {
           }} href="/write">Write</Link>
           <span onClick={() => {
             setShowMenu(false)
+            signOut()
           }} className='cursor-pointer'>Logout</span>
         </>
       )}
