@@ -19,6 +19,7 @@ const index = ({ item }: any) => {
   const formattedDate = formatCreatedAt(item.createdAt);
   const textContent = typeof item.desc === 'string' ? item.desc.replace(/<[^>]*>/g, '') : '';
 
+  console.log(textContent)
   return (
     <div key={item.id} className='flex items-center gap-4 max-md:gap-3 max-md:flex-col max-md:items-start'>
       <div className='md:flex-1 md:w-[500px] max-md:text-left max-md:w-full'>
