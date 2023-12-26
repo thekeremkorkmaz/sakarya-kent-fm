@@ -100,7 +100,7 @@ const Page = () => {
   return (
     <div className='flex flex-col gap-14 mt-16 relative'>
       <input
-        className='max-sm:w-[100%] w-[80%] text-2xl py-2 px-2 border-transparent bg-transparent max-sm:text-base'
+        className='max-sm:w-[100%] w-[80%] text-2xl py-2 px-2 border bg-transparent max-sm:text-base'
         type="text"
         placeholder='title'
         onChange={(e) => {
@@ -147,6 +147,7 @@ const Page = () => {
       <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
         <textarea
           onChange={(e) => setValue(e.target.value)}
+          placeholder='Blogunuzu buraya yazın...'
           value={value}
           className='w-full h-52 border-2 border-gray-300  rounded-lg outline-none focus:border-blue-500 px-2'
         />
