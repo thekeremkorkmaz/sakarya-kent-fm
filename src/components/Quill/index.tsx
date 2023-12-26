@@ -13,12 +13,13 @@ const index = () => {
 
     return (
         <div>
-            <ReactQuill
-                theme="bubble"
-                value={value}
-                onChange={setValue}
-                placeholder='Yazmaya başlayın...'
-            /></div>
+            <input 
+            type="text" 
+            onChange={(e) => setValue(e.target.value)}
+            value={value}
+            className='w-full h-10 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500'
+            />
+        </div>
     )
 }
 
