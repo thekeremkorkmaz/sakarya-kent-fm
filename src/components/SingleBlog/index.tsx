@@ -22,17 +22,18 @@ const Index: React.FC<Props> = ({ data, slug, keyVal }: Props) => {
     const maxLength = 40;
     const words = text.split(/\s+/); // Boşluklara göre kelimeleri ayır
 
+    let currentLine = '';
     const formattedText = words.reduce((result: string[], word: string) => {
-      let currentLine = result.length > 0 ? result[result.length - 1] : ''; // Son satırı al
-
-      if ((currentLine + word).length <= maxLength) {
-        result[result.length - 1] = `${currentLine} ${word}`;
+      if ((currentLine + ' ' + word).length <= maxLength) {
+        currentLine += ' ' + word;
       } else {
-        result.push(word);
+        result.push(currentLine.trim());
+        currentLine = word;
       }
-
       return result;
     }, []);
+
+    formattedText.push(currentLine.trim());
 
     return formattedText.join('<br />');
   };
@@ -41,7 +42,7 @@ const Index: React.FC<Props> = ({ data, slug, keyVal }: Props) => {
 
   return (
     <div className='flex-5'>
-      <p>{formattedData}</p>
+      <div key={keyVal} className='flex flex-col gap-3 max-md:text-sm w-[300px]' dangerouslySetInnerHTML={{ __html: formattedData }} />
       <Comments postSlug={slug} />
     </div>
   );
