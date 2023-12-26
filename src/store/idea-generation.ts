@@ -5,6 +5,8 @@ interface GenerationState {
     setTheme: (theme: boolean) => void;
     showMenu: boolean;
     setShowMenu: (showMenu: boolean) => void;
+    value: string;
+    setValue: (value: string) => void;
 }
 
 export const useGenerationStore = create<GenerationState>()((set) => ({
@@ -12,4 +14,6 @@ export const useGenerationStore = create<GenerationState>()((set) => ({
     setTheme: (theme) => set({ theme }),
     showMenu: false,
     setShowMenu: (showMenu) => set({ showMenu }),
+    value: '',
+    setValue: (value) => set({ value }),
 }));
