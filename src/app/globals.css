@@ -15,3 +15,10 @@ a{
 .quill > .ql-container > .ql-editor.ql-blank::before{
   color: #b3b3b1;
 }
+
+.custom-paragraph-style {
+  max-width: 200px; /* veya istediğiniz genişliği belirtin */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
