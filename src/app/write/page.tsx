@@ -156,6 +156,7 @@ const Page = () => {
           <input
             type="text"
             className='hidden'
+            onFocus={() => setQuillFocused(true)} // Odaklandığında ReactQuill'e odaklanması sağlanır
           />
         )}
       </div>
