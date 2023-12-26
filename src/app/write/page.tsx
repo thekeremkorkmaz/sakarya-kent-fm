@@ -151,7 +151,7 @@ const Page = () => {
           onChange={handleTextareaChange}
           placeholder='Blogunuzu buraya yazın...'
           value={value}
-          className='w-full h-52 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base'
+          className='w-full h-52 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base max-sm:w-[100%]'
         />
       </div>
       <button
