@@ -23,7 +23,7 @@ const index = ({ data, slug, keyVal }: Props) => {
 
   return (
     <div className='flex-5'>
-      <div key={keyVal} className='flex flex-col gap-3 max-md:text-sm' dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      <div key={keyVal} className='flex flex-col gap-3 max-md:text-sm w-[300px]' dangerouslySetInnerHTML={{ __html: htmlContent }} />
       <Comments postSlug={slug}/>
     </div>
   );

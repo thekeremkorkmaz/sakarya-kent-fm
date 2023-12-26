@@ -53,7 +53,7 @@ const Page = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setMedia(downloadURL);
-            toast.success('Image uploaded successfully')
+            toast.success('Resim başarıyla yüklendi!')
           });
         }
       );
