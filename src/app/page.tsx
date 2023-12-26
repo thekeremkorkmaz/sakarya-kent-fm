@@ -14,7 +14,6 @@ export default function Home({searchParams} : any) {
       <div className='flex gap-11 max-md:flex-col'>
         <CardList page={page}/>
         <Menu />
-        coming soon
       </div>
     </div>
   )
