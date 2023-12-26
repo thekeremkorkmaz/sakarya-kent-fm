@@ -19,11 +19,14 @@ const Page = () => {
 
   const [file, setFile] = useState<File | null>(null);
   const [media, setMedia] = useState("");
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(true); 
   const [value, setValue] = useState('');
   const [title, setTitle] = useState('');
   const [catSlug, setCatSlug] = useState("");
-  const [isQuillFocused, setQuillFocused] = useState(false);
+  const [quillFocused, setQuillFocused] = useState(false);
+  const [quillContent, setQuillContent] = useState('');
+
+
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -62,7 +65,7 @@ const Page = () => {
   }, [file]);
 
   const handleQuillChange = (content: string) => {
-    setValue(content);
+    setQuillContent(content);
   };
 
   const slugify = (str: string) =>
@@ -142,13 +145,14 @@ const Page = () => {
       <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base border'>
         <ReactQuill
           theme="bubble"
-          value={value}
+          id='desc'
+          value={quillContent}
           onChange={handleQuillChange}
           placeholder='Yazmaya başlayın...'
           onFocus={() => setQuillFocused(true)}
           onBlur={() => setQuillFocused(false)}
         />
-        {isQuillFocused && (
+        {quillFocused && (
           <input
             type="text"
             className='hidden'
