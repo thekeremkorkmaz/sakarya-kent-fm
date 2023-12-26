@@ -155,7 +155,6 @@ const Page = () => {
             type="text"
             value={quillContent}
             onChange={(e) => handleQuillChange(e.target.value)}
-            onFocus={() => setQuillFocused(true)} // Odaklandığında ReactQuill'e odaklanması sağlanır
           />
         )}
       </div>
