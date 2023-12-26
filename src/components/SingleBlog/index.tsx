@@ -41,7 +41,7 @@ const Index: React.FC<Props> = ({ data, slug, keyVal }: Props) => {
 
   return (
     <div className='flex-5'>
-      <div key={keyVal} className='flex flex-col gap-3 max-md:text-sm w-[300px]' dangerouslySetInnerHTML={{ __html: formattedData }} />
+      <p>{formattedData}</p>
       <Comments postSlug={slug} />
     </div>
   );
