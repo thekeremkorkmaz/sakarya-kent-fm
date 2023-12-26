@@ -23,8 +23,7 @@ const index = ({ data, slug, keyVal }: Props) => {
   return (
     <div className='flex-5'>
       <div className='w-48'>
-        <p className='w-36'>{data}</p>
-
+        <p className='custom-paragraph-style'>{data}</p>
       </div>
       <Comments postSlug={slug} />
     </div>

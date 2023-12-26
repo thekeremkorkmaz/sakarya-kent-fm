@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { BsImageFill, BsPlusCircleFill } from 'react-icons/bs';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -96,6 +96,15 @@ const Page = () => {
     router.push('/');
   }
 
+  const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
+    setValue(e.target.value);
+
+    // Belirli bir uzunluğa ulaşıldığında, textarea'nın otomatik olarak alt satıra geçmesi için
+    const textarea = e.target;
+    const rows = Math.ceil((textarea.scrollHeight - textarea.offsetTop) / 20); // 20: Satır başına düşen yaklaşık piksel sayısı
+    textarea.rows = rows;
+  };
+
   return (
     <div className='flex flex-col gap-14 mt-16 relative'>
       <input
@@ -139,10 +148,10 @@ const Page = () => {
       </div>
       <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
         <textarea
-          onChange={(e) => setValue(e.target.value)}
+          onChange={handleTextareaChange}
           placeholder='Blogunuzu buraya yazın...'
           value={value}
-          className='w-full h-52 border-2 border-gray-300  rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base'
+          className='w-full h-52 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base'
         />
       </div>
       <button
