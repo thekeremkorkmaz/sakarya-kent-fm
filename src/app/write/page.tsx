@@ -16,7 +16,7 @@ const Page = () => {
   const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 
-  const { value, setValue } = useGenerationStore()
+  const { value } = useGenerationStore()
 
   const router = useRouter()
 
@@ -145,12 +145,7 @@ const Page = () => {
         )}
       </div>
       <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
-        <ReactQuill
-          theme="bubble"
-          value={value}
-          onChange={setValue}
-          placeholder='Yazmaya başlayın...'
-        />
+
       </div>
       <button
         className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
