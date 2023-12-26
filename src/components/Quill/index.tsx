@@ -12,11 +12,12 @@ const index = () => {
     const { setValue } = useGenerationStore()
 
     return (
-        <div>        <ReactQuill
-            theme="bubble"
-            onChange={setValue}
-            placeholder='Yazmaya başlayın...'
-        /></div>
+        <div>
+            <ReactQuill
+                theme="bubble"
+                onChange={setValue}
+                placeholder='Yazmaya başlayın...'
+            /></div>
     )
 }
 

@@ -9,6 +9,7 @@ import { app } from "@/utils/firebase";
 import "react-quill/dist/quill.bubble.css";
 import { useGenerationStore } from '@/store/idea-generation'
 import dynamic from "next/dynamic";
+import Quill from '@/components/Quill';
 
 const Page = () => {
   const { status } = useSession()
@@ -145,7 +146,7 @@ const Page = () => {
         )}
       </div>
       <div className='h-56 max-sm:w-[50%] w-[80%] max-sm:text-base '>
-
+        <Quill />
       </div>
       <button
         className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
