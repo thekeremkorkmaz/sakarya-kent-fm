@@ -26,9 +26,9 @@ const Page = () => {
 
   useEffect(() => {
     const storage = getStorage(app);
+
     const upload = () => {
       if (!file) return;
-      toast.warning('Lütfen bekleyin...');
       const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
 
@@ -37,8 +37,7 @@ const Page = () => {
       uploadTask.on(
         "state_changed",
         (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           console.log("Upload is " + progress + "% done");
           switch (snapshot.state) {
             case "paused":
@@ -53,7 +52,7 @@ const Page = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setMedia(downloadURL);
-            toast.success('Resim başarıyla yüklendi!')
+            toast.success('Resim yüklendi');
           });
         }
       );
@@ -61,7 +60,6 @@ const Page = () => {
 
     file && upload();
   }, [file]);
-
   if (status === 'loading') {
     return <div>Loading...</div>
   }
