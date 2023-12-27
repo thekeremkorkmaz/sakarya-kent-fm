@@ -82,11 +82,12 @@ const Page = () => {
     if (!title || !value || !media || !catSlug) {
       console.log('error');
     };
+    
     const res = await fetch('https://sakarya-kent-fm.vercel.app/api/posts', {
       method: 'POST',
       body: JSON.stringify({
         title,
-        desc: value,
+        desc: `<p>${value}</p>`,
         img: media,
         slug: slugify(title),
         catSlug: catSlug,
@@ -97,7 +98,7 @@ const Page = () => {
   }
 
   const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    setValue(`<p className="w-[200px]">${e.target.value}</p>`);
+    setValue(e.target.value);
 
     // Belirli bir uzunluğa ulaşıldığında, textarea'nın otomatik olarak alt satıra geçmesi için
     const textarea = e.target;
