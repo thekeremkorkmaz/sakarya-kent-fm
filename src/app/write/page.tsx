@@ -97,7 +97,7 @@ const Page = () => {
   }
 
   const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    setValue(e.target.value);
+    setValue(`<p className="w-[200px]">${e.target.value}</p>`);
 
     // Belirli bir uzunluğa ulaşıldığında, textarea'nın otomatik olarak alt satıra geçmesi için
     const textarea = e.target;
