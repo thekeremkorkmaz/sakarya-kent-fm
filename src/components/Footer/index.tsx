@@ -10,7 +10,7 @@ const page = () => {
           <Image className='rounded-[50%]' src="/logo.png" width={50} height={50} alt='logo' />
           <h1 className='font-semibold'>Sakarya Kent Fm</h1>
         </div>
-        <p className='w-[80%]'>Merhaba sayın Sakarya Kent Fm dinleyiceleri sitemizde kalarak radyomuzun yayınlarını dinleyebilirsiniz. Bültenimize abone olarak yeni bloglardan ver yayınlardan haberdar olabilirsiniz.</p>
+        <p className='w-[80%] max-sm:text-xs'>Merhaba sayın Sakarya Kent Fm dinleyiceleri sitemizde kalarak radyomuzun yayınlarını dinleyebilirsiniz. Bültenimize abone olarak yeni bloglardan ver yayınlardan haberdar olabilirsiniz.</p>
         <div className='flex gap-2 lg:flex-1'>
           <Image src="/instagram.png" height={24} width={24} alt='helo' />
           <Image src="/facebook.png" height={24} width={24} alt='helo' />
