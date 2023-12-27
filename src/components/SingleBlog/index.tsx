@@ -19,11 +19,12 @@ const index = ({ data, slug, keyVal }: Props) => {
     ) 
   }
 
-  const htmlContent = typeof data === 'string' ? data : '';
+  // const htmlContent = typeof data === 'string' ? data : '';
 
   return (
     <div className='flex-5'>
-      <div key={keyVal} className='flex flex-col gap-3 max-md:text-sm w-[300px]' dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      {/* <div key={keyVal} className='flex flex-col gap-3 max-md:text-sm w-[300px]' dangerouslySetInnerHTML={{ __html: htmlContent }} /> */}
+      {data}
       <Comments postSlug={slug}/>
     </div>
   );

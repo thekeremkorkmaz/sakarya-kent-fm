@@ -22,3 +22,6 @@ a{
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.text-new{
+  width: 200px;
+}
