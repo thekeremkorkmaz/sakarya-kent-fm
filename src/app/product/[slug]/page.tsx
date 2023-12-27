@@ -44,7 +44,7 @@ const page = async ({ params }: { params: Params }) => {
     <div className='mt-20 gap-24 flex-col flex'>
       <div className='flex gap-6 max-md:flex-col'>
         <div className='flex-1 gap-5 flex flex-col'>
-          <h2 className='text-5xl font-semibold max-md:text-3xl '>{data.title}</h2>
+          <h2 className='text-5xl font-semibold max-md:text-3xl text-old'>{data.title}</h2>
           <div className='flex gap-4 items-center'>
             {
               data?.user.image && <Image className='rounded-[50%] w-10 h-10' src={data.user.image} alt='' height={40} width={40} />
