@@ -28,6 +28,7 @@ const Page = () => {
     const storage = getStorage(app);
     const upload = () => {
       if (!file) return;
+      toast.info('Resim yükleniyor...');
       const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
 
@@ -52,6 +53,7 @@ const Page = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setMedia(downloadURL);
+            toast.success('Resim yüklendi');
           });
         }
       );
