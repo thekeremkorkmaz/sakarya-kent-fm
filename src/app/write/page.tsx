@@ -109,7 +109,7 @@ const Page = () => {
   return (
     <div className='flex flex-col gap-14 mt-16 relative'>
       <input
-        className='max-sm:w-[100%] w-[80%] text-2xl py-2 px-2 border bg-transparent max-sm:text-base'
+        className='max-sm:w-[100%] w-[80%] text-2xl py-2 px-2 border mt-16 bg-transparent max-sm:text-base'
         type="text"
         placeholder='title'
         onChange={(e) => {
@@ -152,11 +152,11 @@ const Page = () => {
           onChange={handleTextareaChange}
           placeholder='Blogunuzu buraya yazın...'
           value={value}
-          className='w-full h-52 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base max-sm:w-full max-sm:h-96'
+          className='w-full h-52 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base max-sm:w-full'
         />
       </div>
       <button
-        className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base max-sm:top-20'
+        className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base max-sm:top-0'
         onClick={handleSubmit}
       >Publish</button>
       <p>Herşeyi yaptığınızdan emin olduktan sonra publis butonuna basıp bekleyin anasayfaya yönlendirileceksiniz. "+" işaretine bastıktan sonra görsel simgesine tıklayak resim yükleyebilirsiniz.</p>
