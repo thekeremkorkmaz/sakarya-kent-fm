@@ -152,11 +152,11 @@ const Page = () => {
           onChange={handleTextareaChange}
           placeholder='Blogunuzu buraya yazın...'
           value={value}
-          className='w-full h-52 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base sm:w-[100%]'
+          className='w-full h-52 border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 px-2 bg-transparent max-sm:text-base max-sm:w-[100%]'
         />
       </div>
       <button
-        className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base'
+        className='absolute top-0 right-0 text-xl border-2 rounded-lg font-bold py-2 px-3 max-sm:text-base max-sm:top-20'
         onClick={handleSubmit}
       >Publish</button>
       <p>Herşeyi yaptığınızdan emin olduktan sonra publis butonuna basıp bekleyin anasayfaya yönlendirileceksiniz. "+" işaretine bastıktan sonra görsel simgesine tıklayak resim yükleyebilirsiniz.</p>
