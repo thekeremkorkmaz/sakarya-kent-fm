@@ -20,7 +20,6 @@ a{
   max-width: 200px; /* veya istediğiniz genişliği belirtin */
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .text-new{
   width: 400px;
