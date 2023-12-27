@@ -87,7 +87,7 @@ const Page = () => {
       method: 'POST',
       body: JSON.stringify({
         title,
-        desc: `<p className="text-new">${value}</p>`,
+        desc: value,
         img: media,
         slug: slugify(title),
         catSlug: catSlug,
