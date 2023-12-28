@@ -10,7 +10,7 @@ const Index = () => {
   const { showMenu, setShowMenu } = useGenerationStore();
 
   // E-posta adresinin belirli bir formata uygun olup olmadığını kontrol et
-  const isValidEmail = data?.user?.email === 'azratekin400@gmail.com';
+  const isValidEmail = data?.user?.email === 'azratekin400@gmail.com' || 'keremkorkmaz54@gmail.com';
 
   return (
     <div className='flex items-center justify-center flex-col left-0 px-5 py-6 absolute h-[100%] bg-black text-white text-3xl w-full z-50 gap-10 top-16 '>

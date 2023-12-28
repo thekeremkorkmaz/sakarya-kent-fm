@@ -18,7 +18,7 @@ const Index = () => {
     setShowMenu(false);
   };
 
- const isValidEmail = data?.user?.email === 'azratekin400@gmail.com';
+ const isValidEmail = data?.user?.email === 'azratekin400@gmail.com' || 'keremkorkmaz54@gmail.com';
 
   // Eğer e-posta uygun değilse, "Write" linkini devre dışı bırak
   if (!isValidEmail) {
