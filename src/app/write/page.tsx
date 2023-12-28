@@ -70,10 +70,6 @@ const Page = () => {
     router.push('/login')
   }
 
-  if (data?.user?.email !== 'azratekin400@gmail.com') {
-    router.push('/')
-    toast.error('Bu sayfaya erişim yetkiniz bulunmamaktadır. Yetkililerle iletişime geçiniz.')
-  }
 
   const slugify = (str: string) =>
     str
