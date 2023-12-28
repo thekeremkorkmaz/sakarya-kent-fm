@@ -8,7 +8,7 @@ const index = () => {
       <h1 className='md:text-5xl lg:text-7xl text-4xl leading-normal'>Hey,<b> Sakarya Kent Fm</b> here, Discover my stories and creative ideas.</h1>
       <div className='mt-16 md:gap-11 flex justify-center items-center'>
         <div className='md:flex-1'>
-          <Image className='w-[500px] h-[500px] max-lg:w-[400px] max-lg:h-[400px]  max-md:hidden' src="/p1.jpeg" height={500} width={400} alt='featured'/>
+          <Image className='w-[500px] h-[500px] max-lg:w-[400px] max-lg:h-[400px]  max-md:hidden' src="/kent.png" height={500} width={400} alt='featured'/>
         </div>
         <div className='md:flex-1 flex gap-8 flex-col text-left'>
           <h2 className='text-4xl font-semibold max-md:text-2xl max-lg:text-2xl'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
