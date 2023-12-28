@@ -8,7 +8,7 @@ import { app } from "@/utils/firebase";
 import { toast } from 'react-toastify';
 
 const Page = () => {
-  const { status } = useSession()
+  const { status, data } = useSession()
 
 
 
@@ -68,6 +68,10 @@ const Page = () => {
 
   if (status === 'unauthenticated') {
     router.push('/login')
+  }
+
+  if (data?.user?.email !== 'azratekin400@gmail.com') {
+    router.push('/')
   }
 
   const slugify = (str: string) =>
