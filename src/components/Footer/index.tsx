@@ -7,7 +7,7 @@ const page = () => {
     <div className='flex mt-11 max-lg:flex-col '>
       <div className='md:flex-5 flex flex-col gap-5 mb-6'>
         <div className='flex items-center gap-5'>
-          <Image className='rounded-[50%]' src="/logo.png" width={50} height={50} alt='logo' />
+          <Image className='rounded-[50%]' src="/kent.png" width={50} height={50} alt='logo' />
           <h1 className='font-semibold'>Sakarya Kent Fm</h1>
         </div>
         <p className='w-[80%] max-sm:text-sm'>Merhaba sayın Sakarya Kent Fm dinleyiceleri sitemizde kalarak radyomuzun yayınlarını dinleyebilirsiniz. Bültenimize abone olarak yeni bloglardan ver yayınlardan haberdar olabilirsiniz.</p>
