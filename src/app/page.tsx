@@ -11,7 +11,10 @@ export default function Home({searchParams} : any) {
   return (
     <div className='flex flex-col gap-28 mt-44 max-lg:mt-16 max-md:mt-11'>
       <GoListen />
+      <div className='relative top-36'>
       <Listen />
+
+      </div>
       <Featured />
       <div className='flex gap-11 max-md:flex-col'>
         <CardList page={page}/>
