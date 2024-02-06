@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 const index = () => {
   return (
-    <div >
+    <div className='relative top-11'>
       <Script src='/js/radio.js'/>
     </div>
   )
