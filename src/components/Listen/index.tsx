@@ -11,15 +11,16 @@ const page = () => {
 
   return (
     <div className='flex justify-center flex-col gap-3 items-center'>
-      <p className='font-semibold text-2xl'>Radyomuzu Dinleyin</p>
-      <div className='flex bg-yellow-500 w-max py-3 pr-9 rounded-lg pl-3 gap-3 items-center justify-start'>
-        <div className='cursor-pointer w-max' onClick={()=>{
-          setPlaying(!playing)
-        }}>
-          {playing ? <FaStop size={30}/> : <FaPlay size={30}/>}
-        </div>
-        <div className='h-1 w-[200px] bg-black rounded-lg'></div>
-      </div>
+      <script type='text/javascript'>
+        var cstrFreePlayerUid = 587459;
+        var cstrFreePlayerTheme = 'color';
+        var cstrFreePlayerColor = '000000';
+      </script>
+      <script type='text/javascript' src='//corscdn.caster.fm/freeplayer/FreePlanPlayerEmbed.js'></script>
+      {/* DO NOT REMOVE THE LINKS BELOW, THEY WILL BE HIDDEN (AND WILL HELP US A LOT) */}
+      <a id='cstrFreePlayerBL1' href='//www.caster.fm/'>Free Shoutcast Hosting</a>
+      <a id='cstrFreePlayerBL2' href='//www.caster.fm/'>Radio Stream Hosting</a>
+      <div id='cstrFreePlayerDiv'></div>
 
     </div>
   )
