@@ -5,7 +5,7 @@ import Link from 'next/link'
 const index = () => {
   return (
     <div >
-      <h1 className='md:text-5xl lg:text-7xl text-4xl leading-normal'><b> Sakarya Kent Fm;</b> Şehrin En Fiyakalı Radyosu</h1>
+      <h1 className='md:text-5xl lg:text-7xl text-3xl leading-normal'><b> Sakarya Kent FM;</b> Şehrin En Fiyakalı Radyosu</h1>
       <div className='mt-16 md:gap-11 flex justify-center items-center'>
         <div className='md:flex-1'>
           <Image className='w-[500px] h-[500px] max-lg:w-[400px] max-lg:h-[400px]  max-md:hidden' src="/kent.png" height={500} width={400} alt='featured'/>
