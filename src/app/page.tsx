@@ -16,7 +16,7 @@ export default function Home({searchParams} : any) {
 
       </div>
       <Featured />
-      <div className='flex gap-11 max-md:flex-col'>
+      <div id="list" className='flex gap-11 max-md:flex-col'>
         <CardList page={page}/>
         <Menu />
       </div>
