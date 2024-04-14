@@ -15,7 +15,7 @@ const Index = () => {
 
   return (
     <div className='flex items-center justify-center flex-col left-0 px-5 py-6 absolute h-[100%] bg-black text-white text-3xl w-full z-50 gap-10 top-16 '>
-          <Link onClick={() => setShowMenu(false)} href="/#list">Anasayfa</Link>
+          <Link onClick={() => setShowMenu(false)} href="/">Anasayfa</Link>
           <Link onClick={() => setShowMenu(false)} href="/#foot">Radyo</Link>
           <Link onClick={() => setShowMenu(false)} href="/#list">Podcastler</Link>
           <Link onClick={() => setShowMenu(false)} href="/#foot">Hakkımda</Link>
