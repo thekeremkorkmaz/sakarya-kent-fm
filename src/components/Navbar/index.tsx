@@ -25,8 +25,6 @@ const page = () => {
         <div className='flex gap-5 lg:flex-1 items-center max-lg:text-sm '>
           <ThemeToggle />
           <Link className='max-md:hidden' href="/">Anasayfa</Link>
-          <Link className='max-md:hidden' href="/">Radyo</Link>
-          <Link className='max-md:hidden' href="/">Podcastler</Link>
           <Link className='max-md:hidden' href="/">Hakkımda</Link>
           <Link className='max-md:hidden' href="/">Blog</Link>
           <Link className='max-md:hidden' href="/">iletişim</Link>
