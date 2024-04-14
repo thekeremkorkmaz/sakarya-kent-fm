@@ -12,7 +12,17 @@ const index = () => {
         </div>
         <div className='md:flex-1 flex gap-8 flex-col text-left'>
           <h2 className='text-4xl font-semibold max-md:text-2xl max-lg:text-2xl'>Sakarya Kent FM: Yeni Bir Nefes, Yepyeni Bir Ritim!</h2>
-          <p className='text-md max-lg:text-sm opacity-75'>Sakarya Kent FM, müziğin ve haberin ritmini taşıyan yepyeni bir radyo istasyonu olarak sizlerle buluşuyor! Adını Sakarya'nın zengin kültüründen alan bu özel frekansta, dinleyicilere unutulmaz anlar yaşatmak için heyecanla çalışıyoruz.</p>
+          <p className='text-md max-lg:text-sm opacity-75'>Şehrin En Fiyakalı Radyosu!
+
+Türkçe Rap, Rock, Pop ve Jazz severleri bir araya toplayan tek radyo !
+
+Sakarya'nın ritmini ve ruhunu yansıtan Sakarya Kent FM, şehrin en fiyakalı radyosu olarak kaliteli müzik, canlı yayınlar, radyo tiyatroları, sesli kitaplar, podcastler, talk showlar ile spordan sinemaya, borsadan tasavvufa, siyasetten felsefe ve bilime kadar pek çok program ile eşsiz bir deneyim sunuyor.
+
+Şehrin ve dinleyenlerin nabzını tutan , en yeni şarkılar, sevilen klasikler ve birbirinden ilginç konuklarla dolu yayın akışıyla Sakarya Kent FM; Sakarya'nın vazgeçilmez radyosu.
+
+
+SAKARYA KENT FM - GENEL YAYIN YÖNETMENİ:
+KEREM KORKMAZ</p>
           <Link href={"/product/asdasdasdsad"} className='w-max px-4 py-3 max-md:px-3 max-md:py-2 border-2 bg-[#e5e5e5] text-black rounded-lg text-sm'>Read More</Link>
         </div>
       </div>
