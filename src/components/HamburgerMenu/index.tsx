@@ -15,12 +15,12 @@ const Index = () => {
 
   return (
     <div className='flex items-center justify-center flex-col left-0 px-5 py-6 absolute h-[100%] bg-black text-white text-3xl w-full z-50 gap-10 top-16 '>
-          <Link href="/">Anasayfa</Link>
-          <Link href="/">Radyo</Link>
-          <Link href="/">Podcastler</Link>
-          <Link href="/">Hakkımda</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">iletişim</Link>
+          <Link onClick={() => setShowMenu(false)} href="/">Anasayfa</Link>
+          <Link onClick={() => setShowMenu(false)} href="/">Radyo</Link>
+          <Link onClick={() => setShowMenu(false)} href="/">Podcastler</Link>
+          <Link onClick={() => setShowMenu(false)} href="/">Hakkımda</Link>
+          <Link onClick={() => setShowMenu(false)} href="/">Blog</Link>
+          <Link onClick={() => setShowMenu(false)} href="/">iletişim</Link>
       {status === 'unauthenticated' ? (
         <>
           <Link onClick={() => setShowMenu(false)} href="/login">
