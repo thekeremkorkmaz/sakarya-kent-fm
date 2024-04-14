@@ -10,7 +10,11 @@ const page = () => {
           <Image className='rounded-[50%]' src="/kent.png" width={50} height={50} alt='logo' />
           <h1 className='font-semibold'>Sakarya Kent Fm</h1>
         </div>
-        <p className='w-[80%] max-sm:text-sm'>Merhaba sayın Sakarya Kent Fm dinleyiceleri sitemizde kalarak radyomuzun yayınlarını dinleyebilirsiniz. Bültenimize abone olarak yeni bloglardan ver yayınlardan haberdar olabilirsiniz.</p>
+        <p className='w-[80%] max-sm:text-sm'>Şehrin En Fiyakalı Radyosu!
+
+Türkçe Rap, Rock, Pop ve Jazz severleri bir araya toplayan tek radyo !
+
+Şehrin ve dinleyenlerin nabzını tutan , en yeni şarkılar, sevilen klasikler ve birbirinden ilginç konuklarla dolu yayın akışıyla Sakarya Kent FM; Sakarya'nın vazgeçilmez radyosu.</p>
         <div className='flex gap-2 lg:flex-1'>
           <Image src="/instagram.png" height={24} width={24} alt='helo' />
           <Image src="/facebook.png" height={24} width={24} alt='helo' />
