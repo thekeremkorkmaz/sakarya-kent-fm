@@ -12,10 +12,10 @@ const page = () => {
       <div className='flex justify-between items-center '>
         {/* icons  */}
         <div className='flex gap-2 lg:flex-1  max-lg:hidden '>
-          <Image src="/instagram.png" height={24} width={24} alt='helo' />
-          <Image src="/facebook.png" height={24} width={24} alt='helo' />
-          <Image src="/tiktok.png" height={24} width={24} alt='helo' />
-          <Image src="/youtube.png" height={24} width={24} alt='helo' />
+          <a href="https://www.instagram.com/sakaryakentfm/?hl=tr"><Image src="/instagram.png" height={24} width={24} alt='helo' /></a>
+          <a href="https://www.facebook.com/profile.php?id=61553551703104"><Image src="/facebook.png" height={24} width={24} alt='helo' /></a>
+          <a href=""><Image src="/tiktok.png" height={24} width={24} alt='helo' /></a>
+          <a href=""><Image src="/youtube.png" height={24} width={24} alt='helo' /></a>
         </div>
         {/* logo */}
         <div className='lg:flex-1 text-center text-3xl font-bold max-lg:text-2xl'> 
@@ -25,9 +25,9 @@ const page = () => {
         <div className='flex gap-5 lg:flex-1 items-center max-lg:text-sm '>
           <ThemeToggle />
           <Link className='max-md:hidden' href="/">Anasayfa</Link>
-          <Link className='max-md:hidden' href="/">Hakkımda</Link>
-          <Link className='max-md:hidden' href="/">Blog</Link>
-          <Link className='max-md:hidden' href="/">iletişim</Link>
+          <Link className='max-md:hidden' href="/#foot">Hakkımda</Link>
+          <Link className='max-md:hidden' href="/#list">Blog</Link>
+          <Link className='max-md:hidden' href="/#foot">iletişim</Link>
           <AuthLinks />
         </div>
 
