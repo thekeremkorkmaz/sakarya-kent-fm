@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const page = () => {
   return (
-    <div className='flex mt-11 max-lg:flex-col '>
+    <div id="foot" className='flex mt-11 max-lg:flex-col '>
       <div className='md:flex-5 flex flex-col gap-5 mb-6'>
         <div className='flex items-center gap-5'>
           <Image className='rounded-[50%]' src="/kent.png" width={50} height={50} alt='logo' />
