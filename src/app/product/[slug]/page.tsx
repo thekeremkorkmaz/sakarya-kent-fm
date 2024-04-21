@@ -9,7 +9,7 @@ interface Params {
 }
 
 const getData = async (slug: string) => {
-  const res = await fetch(`https://sakarya-kent-fm.vercel.app/api/posts/${slug}`, {
+  const res = await fetch(`https://www.sakaryakentfm.com/api/posts/${slug}`, {
     cache: "no-store",
   })
 
