@@ -46,7 +46,7 @@ const index = ({postSlug} : Params) => {
     const { data, mutate, isLoading } = useSWR(`https://www.sakaryakentfm.com/api/comments?postSlug=${postSlug}`, fetcher)
 
     const handleSubmit = async () => {
-        await fetch('https://sakarya-kent-fm.vercel.app/api/comments', {
+        await fetch('https://www.sakaryakentfm.com/api/comments', {
             method: 'POST',
             body: JSON.stringify({desc, postSlug}),
         });
