@@ -84,7 +84,7 @@ const Page = () => {
       console.log('error');
     };
     
-    const res = await fetch('https://sakarya-kent-fm.vercel.app/api/posts', {
+    const res = await fetch('https://www.sakaryakentfm.com/api/posts', {
       method: 'POST',
       body: JSON.stringify({
         title,
