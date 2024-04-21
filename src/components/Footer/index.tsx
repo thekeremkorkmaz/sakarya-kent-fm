@@ -15,11 +15,11 @@ const page = () => {
 Türkçe Rap, Rock, Pop ve Jazz severleri bir araya toplayan tek radyo !
 
 Şehrin ve dinleyenlerin nabzını tutan , en yeni şarkılar, sevilen klasikler ve birbirinden ilginç konuklarla dolu yayın akışıyla Sakarya Kent FM; Sakarya'nın vazgeçilmez radyosu.</p>
-        <div className='flex gap-2 lg:flex-1'>
-          <Image src="/instagram.png" height={24} width={24} alt='helo' />
-          <Image src="/facebook.png" height={24} width={24} alt='helo' />
-          <Image src="/tiktok.png" height={24} width={24} alt='helo' />
-          <Image src="/youtube.png" height={24} width={24} alt='helo' />
+        <div className='flex gap-2 lg:flex-1  max-lg:hidden '>
+          <a href="https://www.instagram.com/sakaryakentfm/?hl=tr"><Image src="/instagram.png" height={24} width={24} alt='helo' /></a>
+          <a href="https://www.facebook.com/profile.php?id=61553551703104"><Image src="/facebook.png" height={24} width={24} alt='helo' /></a>
+          <a href=""><Image src="/tiktok.png" height={24} width={24} alt='helo' /></a>
+          <a href=""><Image src="/youtube.png" height={24} width={24} alt='helo' /></a>
         </div>
       </div>
       <div className='md:hidden h-[1px] bg-white w-full mb-5'></div>
