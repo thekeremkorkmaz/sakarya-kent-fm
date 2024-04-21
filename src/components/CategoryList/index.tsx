@@ -6,7 +6,7 @@ import { CateProps } from '@/types/index'
 
 
 const getData = async () => {
-  const res = await fetch("https://sakarya-kent-fm.vercel.app/api/categories", {
+  const res = await fetch("https://www.sakaryakentfm.com/api/categories", {
     cache: "no-store",
   })
 
