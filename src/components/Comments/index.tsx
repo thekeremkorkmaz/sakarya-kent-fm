@@ -43,7 +43,7 @@ const index = ({postSlug} : Params) => {
     const [desc, setDesc] = React.useState('')
     const status = useSession()
 
-    const { data, mutate, isLoading } = useSWR(`https://sakarya-kent-fm.vercel.app/api/comments?postSlug=${postSlug}`, fetcher)
+    const { data, mutate, isLoading } = useSWR(`https://www.sakaryakentfm.com/api/comments?postSlug=${postSlug}`, fetcher)
 
     const handleSubmit = async () => {
         await fetch('https://sakarya-kent-fm.vercel.app/api/comments', {
