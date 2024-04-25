@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-
+import {footertext} from '../../texts/index'
+ 
 
 const page = () => {
   return (
@@ -10,11 +11,7 @@ const page = () => {
           <Image className='rounded-[50%]' src="/kent.png" width={50} height={50} alt='logo' />
           <h1 className='font-semibold'>Sakarya Kent Fm</h1>
         </div>
-        <p className='w-[80%] max-sm:text-sm'>Şehrin En Fiyakalı Radyosu!
-
-Türkçe Rap, Rock, Pop ve Jazz severleri bir araya toplayan tek radyo !
-
-Şehrin ve dinleyenlerin nabzını tutan , en yeni şarkılar, sevilen klasikler ve birbirinden ilginç konuklarla dolu yayın akışıyla Sakarya Kent FM; Sakarya'nın vazgeçilmez radyosu.</p>
+        <p className='w-[80%] max-sm:text-sm'>{footertext}</p>
         <div className='flex gap-2 lg:flex-1  max-lg:hidden '>
           <a href="https://www.instagram.com/sakaryakentfm/?hl=tr"><Image src="/instagram.png" height={24} width={24} alt='helo' /></a>
           <a href="https://www.facebook.com/profile.php?id=61553551703104"><Image src="/facebook.png" height={24} width={24} alt='helo' /></a>
