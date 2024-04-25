@@ -1,3 +1,5 @@
+// TALİMATLARA DİKKAT EDİN!!!!!!
+
 // !!Sadece tırnak içindeki yerleri değiştirin. Diğer yerleri değiştirmeyin. Tırnak işaretlerini silmeyin.!!
 
 // sayfanın en başındaki başlık
