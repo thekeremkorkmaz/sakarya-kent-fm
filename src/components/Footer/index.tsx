@@ -33,8 +33,8 @@ const page = () => {
         <div className='flex-1'>
           <h4 className='font-semibold text-xl'>Social</h4>
           <ul className='flex flex-col gap-2 opacity-75 mt-4 text-sm'>
-            <li>Instagram</li>
-            <li>Facebook</li>
+           <a href="https://www.instagram.com/sakaryakentfm/"><li>Instagram</li></a>
+            <a href="https://www.facebook.com/profile.php?id=61553551703104"><li>Facebook</li></a>
             <li>Youtube</li>
             <li>Website</li>
           </ul>
